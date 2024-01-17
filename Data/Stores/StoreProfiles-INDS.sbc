@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>StoreProfile-INDS-Planete</SubtypeId>
+      </Id>
+      <Description>
+
+        [MES Store]
+
+        [FileSource:StoreItems-INDS-Planete.xml]
+
+        [MinOfferItems:5]
+        [MaxOfferItems:15]
+        [MinOrderItems:4]
+        [MaxOrderItems:15]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:true]
+        [EqualizeOffersAndOrders:true]
+
+        //Offers - Sell To Player
+
+        [Offers:Component/Foret_carbure]
+
+
+        //Orders - Buy From Player
+
+        [Orders:Ingot/Iron]
+
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>StoreProfile-INDS-Espace</SubtypeId>
+      </Id>
+      <Description>
+
+        [MES Store]
+
+        [FileSource:StoreItems-INDS-Espace.xml]
+
+        [MinOfferItems:5]
+        [MaxOfferItems:8]
+        [MinOrderItems:4]
+        [MaxOrderItems:8]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:true]
+        [EqualizeOffersAndOrders:true]
+
+        //Offers - Sell To Player
+
+  
+        [Offers:Component/ForetCarbure]
+        [Offers:Ore/Iron]
+      
+
+        [RequiredOffers:ForetCarbureOffer]
+        [RequiredOffers:HydrogenOffer]
+        [RequiredOffers:OxygenOffer]
+
+        //Orders - Buy From Player
+
+
+        [Orders:Ingot/Silver]
+
+
+
+      </Description>
+
+    </EntityComponent>
+
+    
+  </EntityComponents>
+</Definitions>

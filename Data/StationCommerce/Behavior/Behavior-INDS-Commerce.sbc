@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Behavior-INDS-Station-Planete</SubtypeId>
+      </Id>
+      <Description>
+
+        [MES AI Behavior]
+        [BehaviorName:Passive]
+
+        [Triggers:Trigger-INDS-RefreshStores-Planete]
+
+
+      </Description>
+
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Behavior-INDS-Station-Espace</SubtypeId>
+      </Id>
+      <Description>
+
+        [MES AI Behavior]
+        [BehaviorName:Passive]
+
+        [Triggers:Trigger-INDS-RefreshStores-Espace]
+
+        [Triggers:Tigger_supress_off]
+        [Triggers:Tigger_Supress_on]
+        [Triggers:Despawn_Station_distance]
+
+
+      </Description>
+
+    </EntityComponent>
+    
+
+
+  </EntityComponents>
+</Definitions>
